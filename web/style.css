@@ -1,0 +1,154 @@
+:root{
+  --bg:#0f172a;       /* slate-900 */
+  --panel:#111827;    /* gray-900 */
+  --text:#e5e7eb;     /* gray-200 */
+  --muted:#9ca3af;    /* gray-400 */
+  --accent:#22d3ee;   /* cyan-400 */
+  --accent-2:#06b6d4; /* cyan-500 */
+  --error:#f43f5e;    /* rose-500 */
+  --ok:#34d399;       /* emerald-400 */
+  --ring: rgba(34,211,238,.35);
+}
+
+*{ box-sizing:border-box }
+html,body{ height:100% }
+body{
+  margin:0;
+  background:radial-gradient(1200px 800px at 20% -10%, #1f2937, transparent),
+             radial-gradient(900px 600px at 120% 10%, #0e7490, transparent),
+             var(--bg);
+  color:var(--text);
+  font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+.container{
+  min-height:100%;
+  display:grid;
+  place-items:center;
+  padding:24px;
+}
+
+.widget{
+  width:min(640px, 92vw);
+  background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:16px;
+  padding:24px 20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.06);
+  backdrop-filter: blur(6px);
+}
+
+.widget h1{
+  margin:0 0 12px;
+  font-size:20px;
+  letter-spacing:.2px;
+}
+
+label{
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+  margin:4px 0 8px;
+}
+
+.input-row{
+  display:flex;
+  gap:10px;
+}
+
+input{
+  flex:1 1 auto;
+  background:#0b1220;
+  color:var(--text);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:10px;
+  padding:12px 14px;
+  outline:none;
+  transition:border-color .15s ease, box-shadow .15s ease;
+}
+
+input:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px var(--ring);
+}
+
+/* Validierungszustände */
+.is-valid{
+  border-color: var(--ok) !important;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, .25) !important;
+}
+.is-invalid{
+  border-color: var(--error) !important;
+  box-shadow: 0 0 0 3px rgba(244, 63, 94, .25) !important;
+}
+
+button{
+  background:linear-gradient(180deg, var(--accent), var(--accent-2));
+  color:#002b36;
+  border:0;
+  border-radius:10px;
+  padding:0 16px;
+  min-width:64px;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:0 6px 18px rgba(34,211,238,.25);
+}
+
+button:active{ transform:translateY(1px) }
+
+.hint{
+  margin:8px 2px 0;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.output{ margin-top:16px }
+
+.result-row{
+  display:flex;
+  gap:10px;
+  align-items:stretch;
+  width:100%;
+}
+
+.result,
+.error{
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.result{
+  background:rgba(16,185,129,.08);
+  color:#d1fae5;
+}
+.error{
+  background:rgba(244,63,94,.08);
+  color:#ffe4e6;
+}
+
+.copy-btn{
+  white-space:nowrap;
+  background:linear-gradient(180deg, #a7f3d0, #6ee7b7);
+  color:#064e3b;
+  border:0;
+  border-radius:10px;
+  padding:0 14px;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:0 6px 18px rgba(16,185,129,.25);
+  margin-left:auto; /* schiebt den Button ganz nach rechts */
+}
+.copy-btn:active{ transform: translateY(1px) }
+.copy-btn.success{
+  background:linear-gradient(180deg, #86efac, #4ade80);
+}
+
+.footer{
+  margin-top:14px;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+}
+
+
