@@ -1,33 +1,33 @@
 <!doctype html>
-<html lang="de">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Quadratwurzel-Widget</title>
+    <title>Виджет квадратного корня</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="container">
       <section class="widget" aria-labelledby="widget-title">
-        <h1 id="widget-title">Quadratwurzel-Berechner</h1>
+        <h1 id="widget-title">Калькулятор квадратного корня</h1>
         <div>
-          <label for="number-input">Zahl eingeben</label>
+          <label for="number-input">Введите число</label>
           <div class="input-row">
-            <input id="number-input" name="number" inputmode="decimal" placeholder="z. B. 2" autocomplete="off" />
+            <input id="number-input" name="number" inputmode="decimal" placeholder="например, 2" autocomplete="off" />
           </div>
         </div>
 
         <div class="output" aria-live="polite" aria-atomic="true">
           <div class="result-row" hidden>
             <div id="result" class="result"></div>
-            <button id="copy-btn" class="copy-btn" type="button" aria-label="Ergebnis kopieren">Kopieren</button>
+            <button id="copy-btn" class="copy-btn" type="button" aria-label="Скопировать результат">Скопировать</button>
           </div>
           <div id="error" class="error" hidden></div>
         </div>
       </section>
 
       <footer class="footer">
-        <small>Negativzahlen sind nicht erlaubt. Ergebnis mit 6 Dezimalstellen.</small>
+        <small>Отрицательные числа не допускаются. Результат с 6 знаками после запятой.</small>
       </footer>
     </main>
 
